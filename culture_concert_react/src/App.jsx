@@ -25,11 +25,6 @@ function Header() {
 
       <div className="event-name">Echoes of Culture 2026</div>
 
-      <button className="menu-button" aria-label="Menu">
-        <span />
-        <span />
-        <span />
-      </button>
     </header>
   );
 }
@@ -42,7 +37,10 @@ function Hero() {
 
       <div className="hero-content">
         <p className="eyebrow">Tiger Brokers 与 The Cloud Chamber Singers 联袂呈现</p>
-        <h1 id="hero-title">自由投资・自在聆听</h1>
+        <h1 id="hero-title">
+          <span>自由投资</span>
+          <span>自在聆听</span>
+        </h1>
         <p className="hero-subtitle">让金融与艺术在同一舞台相遇。</p>
       </div>
     </section>
@@ -51,7 +49,7 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="intro" aria-labelledby="intro-title">
+    <section className="intro" id="intro" aria-labelledby="intro-title">
       <h2 id="intro-title">一场关于文化与传承的合唱音乐会</h2>
       <p>
         Tiger Brokers 与 The Cloud Chamber Singers 携手，
@@ -63,7 +61,7 @@ function Intro() {
 
 function TigerCard() {
   return (
-    <article className="info-card tiger-card">
+    <article className="info-card tiger-card" id="tiger-brokers">
       <img className="card-icon" src="/assets/tiger-icon.png" alt="Tiger Brokers" />
       <h3>Tiger Brokers</h3>
       <div className="card-line" />
@@ -76,7 +74,7 @@ function TigerCard() {
 
 function TicketCard() {
   return (
-    <article className="info-card ticket-card">
+    <article className="info-card ticket-card" id="tickets">
       <img className="card-icon" src="/assets/ticket-icon.png" alt="Ticket" />
       <h3>购票渠道</h3>
       <div className="card-line" />
@@ -102,7 +100,7 @@ function TicketCard() {
 
 function ChoirCard() {
   return (
-    <article className="info-card choir-card">
+    <article className="info-card choir-card" id="choir">
       <img className="card-icon" src="/assets/group-icon.png" alt="Choir" />
       <h3>合唱团介绍</h3>
       <div className="card-line" />
