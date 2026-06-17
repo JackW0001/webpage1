@@ -34,10 +34,10 @@ const concertDetails = [
 ];
 
 const highlightCards = [
-  { src: '/assets/highlight-1.jpg', alt: '丹中晓望' },
-  { src: '/assets/highlight-2.jpg', alt: '敦煌歌' },
-  { src: '/assets/highlight-3.jpg', alt: 'What Was I Made For' },
-  { src: '/assets/highlight-4.jpg', alt: '海阔天空' }
+  { src: '/assets/highlight-1.jpg', alt: '丹中晓望', title: '丹中晓望' },
+  { src: '/assets/highlight-2.jpg', alt: '敦煌歌', title: '敦煌歌' },
+  { src: '/assets/highlight-3.jpg', alt: 'What Was I Made For', title: 'What Was I Made For' },
+  { src: '/assets/highlight-4.jpg', alt: '海阔天空', title: '海阔天空' }
 ];
 
 function Header() {
@@ -93,7 +93,7 @@ function Hero() {
       </div>
 
       <div className="hero-visual" aria-hidden="true">
-        <img src="/assets/hero-choir.jpg" alt="" />
+        <img src="/assets/choir-people.png" alt="" />
       </div>
     </section>
   );
@@ -139,7 +139,7 @@ function ConcertInfo() {
       </div>
 
       <div className="stage-image">
-        <img src="/assets/venue-stage.jpg" alt="Concert hall stage" />
+        <img src="/assets/choir-stage.png" alt="Concert hall stage" />
       </div>
     </section>
   );
@@ -153,6 +153,7 @@ function Highlights() {
         {highlightCards.map((card) => (
           <article className="highlight-card" key={card.src}>
             <img src={card.src} alt={card.alt} />
+            <h3>{card.title}</h3>
           </article>
         ))}
       </div>
@@ -164,7 +165,7 @@ function ChoirIntro() {
   return (
     <section className="choir-section" id="choir">
       <div className="choir-photo">
-        <img src="/assets/choir-wide.jpg" alt="The Cloud Chamber Singers performing on stage" />
+        <img src="/assets/choir-people.png" alt="The Cloud Chamber Singers performing on stage" />
       </div>
       <div className="choir-copy">
         <p className="section-label">合唱团介绍</p>
@@ -193,7 +194,7 @@ function TigerSection() {
         <a className="soft-button small" href="#home">了解更多 Tiger Brokers →</a>
       </div>
       <div className="network-image">
-        <img src="/assets/global-network.jpg" alt="Global network illustration" />
+        <img src="/assets/globe.png" alt="Global network illustration" />
       </div>
     </section>
   );
@@ -227,7 +228,7 @@ function Footer() {
   );
 }
 
-export default function App() {
+export default function Home() {
   return (
     <div className="page-shell">
       <div className="poster-background" aria-hidden="true" />
