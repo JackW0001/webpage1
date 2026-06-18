@@ -119,7 +119,7 @@ export default function Home() {
           <p className="section-label">特别呈现</p>
           <h2>Tiger Brokers</h2>
           <p>立足新西兰，连接全球市场。支持文化、支持教育、支持社区成长。</p>
-          <Link className="soft-button small" to="/tigerfintech">了解更多 Tiger Brokers →</Link>
+          <Link className="soft-button small" to="/tiger-fintech">了解更多 Tiger Brokers →</Link>
         </div>
         <div className="network-image">
           <img src="/assets/globe.png" alt="Global network illustration" />
