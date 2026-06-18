@@ -1,14 +1,10 @@
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <img src="/assets/footer-left-logo.jpg" alt="Tiger Brokers" />
+      <img className="footer-tiger-logo" src="/assets/tiger-logo1.png" alt="Tiger Brokers" />
       <div className="socials" aria-label="Social links">
-        <span aria-label="Facebook">f</span>
-        <span aria-label="Instagram">◎</span>
-        <span aria-label="YouTube">▶</span>
-        <span aria-label="LinkedIn">in</span>
       </div>
-      <img src="/assets/footer-cloud-logo.jpg" alt="The Cloud" />
+      <img src="/assets/cloud-logo1.png" alt="The Cloud" />
     </footer>
   );
 }

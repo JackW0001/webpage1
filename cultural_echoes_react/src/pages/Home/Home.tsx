@@ -16,10 +16,10 @@ const CONCERT_DETAILS: ConcertDetail[] = [
 ];
 
 const HIGHLIGHT_CARDS: HighlightCard[] = [
-  { src: '/assets/highlight-1.jpg', alt: '丹中晓望', title: '丹中晓望' },
-  { src: '/assets/highlight-2.jpg', alt: '敦煌歌', title: '敦煌歌' },
-  { src: '/assets/highlight-3.jpg', alt: 'What Was I Made For', title: 'What Was I Made For' },
-  { src: '/assets/highlight-4.jpg', alt: '海阔天空', title: '海阔天空' },
+  { src: '/assets/song1.png', alt: '丹中晓望', title: '丹中晓望' },
+  { src: '/assets/song2.png', alt: '敦煌歌', title: '敦煌歌' },
+  { src: '/assets/song3.png', alt: 'What Was I Made For', title: 'What Was I Made For' },
+  { src: '/assets/song4.png', alt: '海阔天空', title: '海阔天空' },
 ];
 
 export default function Home() {

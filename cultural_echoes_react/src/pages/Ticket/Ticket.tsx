@@ -6,17 +6,31 @@ const BENEFITS = [
 ];
 
 const STEPS = [
-  { number: 1, icon: '♙+', text: '通过活动渠道码进行注册并完成开户', qrLabel: '活动渠道码' },
+  {
+    number: 1,
+    icon: '♙+',
+    text: '通过活动渠道码进行注册并完成开户',
+    qrLabel: '活动渠道码',
+    qrSrc: '/assets/highlight-1.jpg', // Replace with your first QR code
+  },
   { number: 2, icon: '▣', text: '首次入金并完成任意 1 笔真实交易' },
-  { number: 3, icon: '⇧', text: '提交相关截图至官方客服完成审核', qrLabel: '官方客服微信' },
+  {
+    number: 3,
+    icon: '⇧',
+    text: '提交相关截图至官方客服完成审核',
+    qrLabel: '官方客服微信',
+    qrSrc: '/assets/highlight-2.jpg', // Replace with your second QR code
+  },
 ];
 
-function QrPlaceholder({ label }: { label: string }) {
+function QrCode({ label, src }: { label: string; src?: string }) {
   return (
     <div className="tk-qr-wrap">
-      <div className="tk-qr" aria-label={`${label}二维码占位`}>
-        {Array.from({ length: 49 }, (_, index) => <i key={index} />)}
-      </div>
+      {src ? (
+        <img className="tk-qr" src={src} alt={`${label}二维码`} />
+      ) : (
+        <div className="tk-qr tk-qr-empty">添加二维码</div>
+      )}
       <span>{label}</span>
     </div>
   );
@@ -80,7 +94,7 @@ export default function Ticket() {
                   <span className="tk-step-icon">{step.icon}</span>
                   <strong>STEP {step.number}</strong>
                   <p>{step.text}</p>
-                  {step.qrLabel && <QrPlaceholder label={step.qrLabel} />}
+                  {step.qrLabel && <QrCode label={step.qrLabel} src={step.qrSrc} />}
                   {index < STEPS.length - 1 && <span className="tk-step-arrow">›</span>}
                 </article>
               ))}
