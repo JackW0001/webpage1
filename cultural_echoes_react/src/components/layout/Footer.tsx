@@ -3,10 +3,10 @@ export default function Footer() {
     <footer className="site-footer">
       <img src="/assets/footer-left-logo.jpg" alt="Tiger Brokers" />
       <div className="socials" aria-label="Social links">
-        <a href="#home" aria-label="Facebook">f</a>
-        <a href="#home" aria-label="Instagram">◎</a>
-        <a href="#home" aria-label="YouTube">▶</a>
-        <a href="#home" aria-label="LinkedIn">in</a>
+        <span aria-label="Facebook">f</span>
+        <span aria-label="Instagram">◎</span>
+        <span aria-label="YouTube">▶</span>
+        <span aria-label="LinkedIn">in</span>
       </div>
       <img src="/assets/footer-cloud-logo.jpg" alt="The Cloud" />
     </footer>

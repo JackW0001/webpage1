@@ -161,7 +161,7 @@ export default function TigerFintech() {
         <div className="tf-cta-center">
           <a
             className="tf-cta-btn"
-            href="https://www.tigertrade.com/nz"
+            href="https://www.itiger.com/nz/"
             target="_blank"
             rel="noreferrer"
           >

@@ -6,10 +6,16 @@ import Ticket from '@/pages/Ticket/Ticket';
 import TigerFintech from '@/pages/TigerFintech/TigerFintech';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto',
+    });
+  }, [location.key]);
+
   return null;
 }
 

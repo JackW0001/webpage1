@@ -19,7 +19,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -573,7 +573,8 @@ main {
   color: var(--gold-light);
 }
 
-.socials a {
+.socials a,
+.socials span {
   text-decoration: none;
   color: rgba(239, 216, 192, 0.86);
   font-family: Arial, sans-serif;

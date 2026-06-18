@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import type { NavItem } from '@/types';
 
 const NAV_ITEMS: NavItem[] = [
-  { label: '首页', href: '#home' },
-  { label: '关于音乐会', href: '#concert' },
-  { label: '曲目亮点', href: '#highlights' },
-  { label: '合唱团', href: '#choir' },
-  { label: '支持我们', href: '#support' },
+  { label: '首页', href: '/' },
+  { label: '关于音乐会', href: '/' },
+  { label: '曲目亮点', href: '/' },
+  { label: '合唱团', href: '/choir' },
+  { label: '支持我们', href: '/tiger-fintech' },
 ];
 
 export default function Header() {
@@ -21,9 +21,9 @@ export default function Header() {
 
       <nav className={`main-nav ${isOpen ? 'is-open' : ''}`}>
         {NAV_ITEMS.map((item) => (
-          <a key={item.href} href={item.href} onClick={() => setIsOpen(false)}>
+          <Link key={item.label} to={item.href} onClick={() => setIsOpen(false)}>
             {item.label}
-          </a>
+          </Link>
         ))}
       </nav>
 
