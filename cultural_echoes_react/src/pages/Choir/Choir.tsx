@@ -1,19 +1,19 @@
 import PageLayout from '@/components/layout/PageLayout';
 
 const GALLERY = [
-  { src: '/assets/song1.png', alt: '精彩瞬间 1', title: '精彩瞬间 01' },
-  { src: '/assets/song2.png', alt: '精彩瞬间 2', title: '精彩瞬间 02' },
-  { src: '/assets/song3.png', alt: '精彩瞬间 3', title: '精彩瞬间 03' },
-  { src: '/assets/song4.png', alt: '精彩瞬间 4', title: '精彩瞬间 04' },
-  { src: '/assets/song5.png', alt: '精彩瞬间 5', title: '精彩瞬间 05' },
-  { src: '/assets/song6.png', alt: '精彩瞬间 6', title: '精彩瞬间 06' },
-  { src: '/assets/song7.png', alt: '精彩瞬间 7', title: '精彩瞬间 07' },
-  { src: '/assets/song8.png', alt: '精彩瞬间 8', title: '精彩瞬间 08' },
-  { src: '/assets/song9.png', alt: '精彩瞬间 9', title: '精彩瞬间 09' },
-  { src: '/assets/song10.png', alt: '精彩瞬间 10', title: '精彩瞬间 10' },
-  { src: '/assets/song11.png', alt: '精彩瞬间 11', title: '精彩瞬间 11' },
-  { src: '/assets/song12.png', alt: '精彩瞬间 12', title: '精彩瞬间 12' },
-  { src: '/assets/song13.png', alt: '精彩瞬间 13', title: '精彩瞬间 13' },
+  { src: '/assets/song1.png', alt: '精彩瞬间 1', title: '敕勒歌' },
+  { src: '/assets/song2.png', alt: '精彩瞬间 2', title: '舟中晓望' },
+  { src: '/assets/song3.png', alt: '精彩瞬间 3', title: '那些年' },
+  { src: '/assets/song4.png', alt: '精彩瞬间 4', title: '慢慢喜欢你' },
+  { src: '/assets/song5.png', alt: '精彩瞬间 5', title: '唯一' },
+  { src: '/assets/song6.png', alt: '精彩瞬间 6', title: '玉门关' },
+  { src: '/assets/song7.png', alt: '精彩瞬间 7', title: '慢' },
+  { src: '/assets/song8.png', alt: '精彩瞬间 8', title: '知足' },
+  { src: '/assets/song9.png', alt: '精彩瞬间 9', title: '亲爱的你啊' },
+  { src: '/assets/song10.png', alt: '精彩瞬间 10', title: '无名的人 ' },
+  { src: '/assets/song11.png', alt: '精彩瞬间 11', title: '孤勇者' },
+  { src: '/assets/song12.png', alt: '精彩瞬间 12', title: '海阔天空' },
+  { src: '/assets/song13.png', alt: '精彩瞬间 13', title: '返场：装满星星的口袋' },
 ];
 
 function GalleryGroup({ duplicate = false }: { duplicate?: boolean }) {
