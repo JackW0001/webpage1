@@ -943,17 +943,48 @@ main {
   border-bottom: 1px solid var(--line);
 }
 
-.ch-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+.ch-gallery-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 0 12px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.ch-gallery-track {
+  display: flex;
+  width: max-content;
+  animation: ch-gallery-scroll 48s linear infinite;
+  will-change: transform;
+}
+
+.ch-gallery-marquee:hover .ch-gallery-track {
+  animation-play-state: paused;
+}
+
+.ch-gallery-group {
+  display: flex;
+  gap: 14px;
+  padding-right: 14px;
 }
 
 .ch-gallery-item {
   position: relative;
+  flex: 0 0 clamp(190px, 20vw, 260px);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  border: 1px solid rgba(221, 188, 151, 0.1);
+  aspect-ratio: 1;
+  border: 1px solid rgba(221, 188, 151, 0.2);
+  background: #080808;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+}
+
+.ch-gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 35% 0 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.94));
+  pointer-events: none;
 }
 
 .ch-gallery-item img {
@@ -964,9 +995,30 @@ main {
   filter: contrast(1.04) brightness(0.9) saturate(0.88);
 }
 
+.ch-gallery-item h3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 42px 16px 18px;
+  color: var(--gold-light);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
 .ch-gallery-item:hover img {
   transform: scale(1.06);
   filter: contrast(1.1) brightness(1) saturate(1);
+}
+
+@keyframes ch-gallery-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .ch-vm-section {
@@ -1035,10 +1087,6 @@ main {
     aspect-ratio: 16 / 9;
   }
 
-  .ch-gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .ch-vm-section {
     grid-template-columns: 1fr;
   }
@@ -1050,8 +1098,8 @@ main {
     padding: 28px 0 20px;
   }
 
-  .ch-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .ch-gallery-item {
+    flex-basis: 180px;
   }
 
   .ch-vm-card {
@@ -1067,6 +1115,22 @@ main {
 
 .ch-video-player {
     aspect-ratio: 16 / 9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ch-gallery-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .ch-gallery-track {
+    animation: none;
+  }
+
+  .ch-gallery-group[aria-hidden='true'] {
+    display: none;
   }
 }
 

@@ -1,12 +1,33 @@
 import PageLayout from '@/components/layout/PageLayout';
 
 const GALLERY = [
-  { src: '/assets/choir-wide.jpg', alt: '合唱团演出' },
-  { src: '/assets/choir-stage.png', alt: '舞台现场' },
-  { src: '/assets/highlight-3.jpg', alt: '精彩瞬间' },
-  { src: '/assets/choir-people.png', alt: '合唱团成员' },
-  { src: '/assets/choir-people-3.JPG', alt: '合唱团合影' },
+  { src: '/assets/song1.png', alt: '精彩瞬间 1', title: '精彩瞬间 01' },
+  { src: '/assets/song2.png', alt: '精彩瞬间 2', title: '精彩瞬间 02' },
+  { src: '/assets/song3.png', alt: '精彩瞬间 3', title: '精彩瞬间 03' },
+  { src: '/assets/song4.png', alt: '精彩瞬间 4', title: '精彩瞬间 04' },
+  { src: '/assets/song5.png', alt: '精彩瞬间 5', title: '精彩瞬间 05' },
+  { src: '/assets/song6.png', alt: '精彩瞬间 6', title: '精彩瞬间 06' },
+  { src: '/assets/song7.png', alt: '精彩瞬间 7', title: '精彩瞬间 07' },
+  { src: '/assets/song8.png', alt: '精彩瞬间 8', title: '精彩瞬间 08' },
+  { src: '/assets/song9.png', alt: '精彩瞬间 9', title: '精彩瞬间 09' },
+  { src: '/assets/song10.png', alt: '精彩瞬间 10', title: '精彩瞬间 10' },
+  { src: '/assets/song11.png', alt: '精彩瞬间 11', title: '精彩瞬间 11' },
+  { src: '/assets/song12.png', alt: '精彩瞬间 12', title: '精彩瞬间 12' },
+  { src: '/assets/song13.png', alt: '精彩瞬间 13', title: '精彩瞬间 13' },
 ];
+
+function GalleryGroup({ duplicate = false }: { duplicate?: boolean }) {
+  return (
+    <div className="ch-gallery-group" aria-hidden={duplicate || undefined}>
+      {GALLERY.map((img) => (
+        <article className="ch-gallery-item" key={`${duplicate ? 'copy-' : ''}${img.src}`}>
+          <img src={img.src} alt={duplicate ? '' : img.alt} />
+          <h3>{img.title}</h3>
+        </article>
+      ))}
+    </div>
+  );
+}
 
 export default function Choir() {
   return (
@@ -58,12 +79,11 @@ export default function Choir() {
       {/* Gallery */}
       <section className="ch-gallery-section">
         <h2 className="ch-section-heading">精彩瞬间</h2>
-        <div className="ch-gallery-grid">
-          {GALLERY.map((img) => (
-            <div className="ch-gallery-item" key={img.src}>
-              <img src={img.src} alt={img.alt} />
-            </div>
-          ))}
+        <div className="ch-gallery-marquee">
+          <div className="ch-gallery-track">
+            <GalleryGroup />
+            <GalleryGroup duplicate />
+          </div>
         </div>
       </section>
 
