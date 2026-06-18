@@ -1,5 +1,6 @@
 import PageLayout from '@/components/layout/PageLayout';
 import type { ReasonCard, HighlightCard, ConcertDetail } from '@/types';
+import { Link } from 'react-router-dom';
 
 const REASONS: ReasonCard[] = [
   { icon: '↗', title: '投资未来', text: '帮助更多人实现长期成长与财务自由' },
@@ -40,10 +41,9 @@ export default function Home() {
           <p className="hero-text muted">
             当投资关注未来，音乐回应内心。在《文化回响》中，我们共同探索财富与精神世界的另一种连接。
           </p>
-          <a className="soft-button" href="#concert">了解更多 →</a>
         </div>
         <div className="hero-visual" aria-hidden="true">
-          <img src="/assets/choir-people.png" alt="" />
+          <img src="/assets/choir-people-2.JPG" alt="" />
         </div>
       </section>
 
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
             ))}
           </dl>
-          <a className="soft-button small" href="#tickets">购票信息 →</a>
+          <Link className="soft-button small" to="/ticket">购票信息 →</Link>
         </div>
         <div className="stage-image">
           <img src="/assets/choir-stage.png" alt="Concert hall stage" />
@@ -100,7 +100,7 @@ export default function Home() {
       {/* Choir Intro */}
       <section className="choir-section" id="choir">
         <div className="choir-photo">
-          <img src="/assets/choir-people.png" alt="The Cloud Chamber Singers performing on stage" />
+          <img src="/assets/choir-people-2.JPG" alt="The Cloud Chamber Singers performing on stage" />
         </div>
         <div className="choir-copy">
           <p className="section-label">合唱团介绍</p>
@@ -109,7 +109,7 @@ export default function Home() {
             The Cloud Chamber Singers 致力于通过合唱连接文化、语言与世代。从中国古典作品到国际流行音乐，我们相信歌声能够跨越边界。
           </p>
           <p>让不同背景的人在同一个空间产生共鸣。</p>
-          <a className="soft-button small" href="#home">了解更多 →</a>
+          <Link className="soft-button small" to="/choir">了解更多 →</Link>
         </div>
       </section>
 
@@ -119,7 +119,7 @@ export default function Home() {
           <p className="section-label">特别呈现</p>
           <h2>Tiger Brokers</h2>
           <p>立足新西兰，连接全球市场。支持文化、支持教育、支持社区成长。</p>
-          <a className="soft-button small" href="#home">了解更多 Tiger Brokers →</a>
+          <Link className="soft-button small" to="/tigerfintech">了解更多 Tiger Brokers →</Link>
         </div>
         <div className="network-image">
           <img src="/assets/globe.png" alt="Global network illustration" />
