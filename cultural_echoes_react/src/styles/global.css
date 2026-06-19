@@ -954,7 +954,7 @@ main {
 .ch-gallery-track {
   display: flex;
   width: max-content;
-  animation: ch-gallery-scroll 48s linear infinite;
+  animation: ch-gallery-scroll 80s linear infinite;
   will-change: transform;
 }
 
