@@ -107,6 +107,17 @@ export default function Ticket() {
               <span>官方客服电话：0800 884 437</span>
             </a>
 
+            <p className="tk-thanks">
+            <strong>“老虎证券新西兰”提醒您：</strong>{' '}
+            投资/交易金融工具有风险，包括损失超出您初始投资金额的风险。衍生品、杠杆、和虚拟资产交易具有高风险且并不适合所有投资者。这不是金融建议。
+            任何被讨论、分享和评论的内容都没有考虑您的投资目标或财务需求。请阅读<a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">我们网站</a>
+            上的
+            <a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">披露声明</a>
+            以及
+            <a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">条款</a>
+            ，并在开户或作出投资决定之前考虑获取或继续持有金融产品是否适合你。图形和图表仅用于说明问题。过去的表现并不是未来结果的可靠指标。由 Tiger Fintech (NZ) Limited (“老虎证券新西兰”) 发布 (NZCN: 8187510)。
+            </p>
+
             {/*<div className="tk-compliance">
               <span>i</span>
               <div>
@@ -151,7 +162,7 @@ export default function Ticket() {
           </div>
         </section>
 
-        <p className="tk-thanks">
+        {/*<p className="tk-thanks">
           <strong>Tiger Fintech (NZ) Limited (“老虎证券新西兰”)免责声明：</strong>{' '}
           投资/交易金融工具有风险，包括损失超出您初始投资金额的风险。衍生品、杠杆、和虚拟资产交易具有高风险且并不适合所有投资者。这不是金融建议。
           任何被讨论、分享和评论的内容都没有考虑您的投资目标或财务需求。请阅读<a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">我们网站</a>
@@ -160,7 +171,7 @@ export default function Ticket() {
           以及
           <a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">条款</a>
           ，并在开户或作出投资决定之前考虑获取或继续持有金融产品是否适合你。图形和图表仅用于说明问题。过去的表现并不是未来结果的可靠指标。由 Tiger Fintech (NZ) Limited (NZCN: 8187510) 发布。
-        </p>
+        </p>*/}
       </div>
     </PageLayout>
   );

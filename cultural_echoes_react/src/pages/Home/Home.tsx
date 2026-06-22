@@ -36,7 +36,7 @@ export default function Home() {
           <h2>理性与感性，在此相遇 —</h2>
           <p className="english-subtitle">WHERE LOGIC MEETS EMOTION</p>
           <p className="hero-text">
-            Tiger Brokers 与 The Cloud Chamber Singers 联合呈现一场跨越文化、时间与心灵的合唱音乐会。
+            Tiger Fintech (NZ) Limited 与 The Cloud Chamber Singers 联合呈现一场跨越文化、时间与心灵的合唱音乐会。
           </p>
           <p className="hero-text">
             当投资关注未来，音乐回应内心。
@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Why Tiger */}
       <section className="reason-section" id="support" aria-labelledby="reason-title">
-        <h2 id="reason-title">为什么 Tiger Fintech (NZ) Limited  支持《文化回响》？</h2>
+        <h2 id="reason-title">为什么 “老虎证券新西兰”  支持《文化回响》？</h2>
         <div className="reason-grid">
           {REASONS.map((r) => (
             <article className="reason-card" key={r.title}>
@@ -133,10 +133,10 @@ export default function Home() {
           <h2>
             Tiger Fintech (NZ) Limited
             <br />
-            老虎证券新西兰
+            “老虎证券新西兰”
           </h2>
           <p>身处新西兰，连接全球市场。支持多元文化。支持丰富教育。支持社区成长。</p>
-          <Link className="soft-button small" to="/tiger-fintech">了解更多 Tiger Fintech (NZ) Limited →</Link>
+          <Link className="soft-button small" to="https://www.itiger.com/nz">了解更多 Tiger Fintech (NZ) Limited →</Link>
         </div>
         <div className="network-image">
           <img src="/assets/globe.png" alt="Global network illustration" />
