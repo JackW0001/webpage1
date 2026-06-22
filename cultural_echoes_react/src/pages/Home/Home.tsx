@@ -3,7 +3,7 @@ import type { ReasonCard, HighlightCard, ConcertDetail } from '@/types';
 import { Link } from 'react-router-dom';
 
 const REASONS: ReasonCard[] = [
-  { icon: '↗', title: '投资未来', text: '帮助更多人实现长期成长与财务自由' },
+  { icon: '↗', title: '投资未来', text: '帮助更多人实现长期成长' },
   { icon: '♡', title: '传承文化', text: '让音乐连接不同时代与多元文化' },
   { icon: '◎', title: '丰富人生', text: '财富创造选择，艺术赋予意义' },
 ];
@@ -11,15 +11,15 @@ const REASONS: ReasonCard[] = [
 const CONCERT_DETAILS: ConcertDetail[] = [
   { label: '演出团体', value: 'The Cloud Chamber Singers' },
   { label: '特别演出', value: 'The Cloud Ladies' },
-  { label: '地点', value: 'Auckland Town Hall, Great Hall' },
-  { label: '时间', value: '23 August 2026' },
+  { label: '演出地点', value: 'Auckland Town Hall, Great Hall' },
+  { label: '演出时间', value: '23 August 2026' },
 ];
 
 const HIGHLIGHT_CARDS: HighlightCard[] = [
-  { src: '/assets/song1.png', alt: '丹中晓望', title: '丹中晓望' },
-  { src: '/assets/song2.png', alt: '敦煌歌', title: '敦煌歌' },
-  { src: '/assets/song3.png', alt: 'What Was I Made For', title: 'What Was I Made For' },
-  { src: '/assets/song4.png', alt: '海阔天空', title: '海阔天空' },
+  { src: '/assets/song1.png', alt: '敕勒歌', title: '敕勒歌', text: '草原文明的辽阔回响' },
+  { src: '/assets/song2.png', alt: '舟中晓望', title: '舟中晓望', text: '古典诗意中的东方美学' },
+  { src: '/assets/song3.png', alt: '那些年', title: '那些年', text: '关于成长与自我寻找' },
+  { src: '/assets/song4.png', alt: '海阔天空', title: '海阔天空', text: '跨越时代的共同记忆' },
 ];
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
             Tiger Brokers 与 The Cloud Chamber Singers 联合呈现一场跨越文化、时间与心灵的合唱音乐会。
           </p>
           <p className="hero-text muted">
-            当投资关注未来，音乐回应内心。在《文化回响》中，我们共同探索财富与精神世界的另一种连接。
+            在《文化回响》中，我们共同探索财富与精神世界的另一种连接。
           </p>
         </div>
         <div className="hero-visual" aria-hidden="true">
@@ -91,7 +91,10 @@ export default function Home() {
           {HIGHLIGHT_CARDS.map((card) => (
             <article className="highlight-card" key={card.src}>
               <img src={card.src} alt={card.alt} />
-              <h3>{card.title}</h3>
+              <div className="highlight-content">
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -117,7 +120,11 @@ export default function Home() {
       <section className="tiger-section" id="tickets">
         <div className="tiger-copy">
           <p className="section-label">特别呈现</p>
-          <h2>Tiger Brokers</h2>
+          <h2>
+            Tiger Fintech (NZ) Limited
+            <br />
+            老虎证券新西兰
+          </h2>
           <p>立足新西兰，连接全球市场。支持文化、支持教育、支持社区成长。</p>
           <Link className="soft-button small" to="/tiger-fintech">了解更多 Tiger Brokers →</Link>
         </div>

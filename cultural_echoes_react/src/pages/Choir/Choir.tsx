@@ -70,9 +70,16 @@ export default function Choir() {
       <section className="ch-video-section">
         <h2 className="ch-section-heading">合唱团视频</h2>
         <div className="ch-video-player">
-          <button className="ch-play-btn" type="button" aria-label="播放合唱团视频">
-            <span className="ch-play-icon" aria-hidden="true">▶</span>
-          </button>
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster="/assets/choir-wide.jpg"
+            aria-label="The Cloud Chamber Singers 合唱团视频"
+          >
+            <source src="/assets/choir1.mp4" type="video/mp4" />
+            您的浏览器不支持视频播放。
+          </video>
         </div>
       </section>
 

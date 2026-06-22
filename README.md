@@ -58,7 +58,7 @@ webpage1/
 
 ```bash
 git clone <仓库地址>
-cd webpage1/cultural_echoes_react
+cd cultural_echoes_react
 npm install
 ```
 

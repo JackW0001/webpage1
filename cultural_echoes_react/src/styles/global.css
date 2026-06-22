@@ -40,7 +40,7 @@ a {
 .page-shell {
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(circle at top right, rgba(221, 179, 137, 0.12), transparent 34rem),
     linear-gradient(180deg, #020202 0%, #090909 52%, #020202 100%);
@@ -66,6 +66,12 @@ main,
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  box-shadow: 0 0 0 100vmax #000;
+  clip-path: inset(0 -100vmax);
   width: min(var(--max-width), calc(100% - 48px));
   margin: 0 auto;
   padding: 34px 0 20px;
@@ -317,13 +323,14 @@ main {
 .reason-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
   gap: 0;
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(221, 188, 151, 0.1);
 }
 
 .reason-card {
-  min-height: 130px;
+  height: 100%;
   display: grid;
   grid-template-columns: 74px 1fr;
   gap: 22px;
@@ -477,22 +484,30 @@ main {
   transition: transform 0.45s ease, filter 0.45s ease;
 }
 
-.highlight-card h3 {
+.highlight-content {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 2;
+  padding: 42px 16px 18px;
+  text-align: center;
+}
+
+.highlight-card h3 {
   margin: 0;
-  padding: 34px 14px 18px;
-  display: grid;
-  place-items: center;
   color: var(--gold-light);
   font-size: 20px;
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: 0.08em;
-  text-align: center;
+}
+
+.highlight-card p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .highlight-card:hover img {
@@ -902,40 +917,15 @@ main {
 .ch-video-player {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 7;
-  max-height: 480px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #000;
   border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
-.ch-play-btn {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 2px solid rgba(217, 179, 137, 0.7);
-  background: rgba(217, 179, 137, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-}
-
-.ch-play-btn:hover {
-  background: rgba(217, 179, 137, 0.18);
-  border-color: var(--gold-light);
-  transform: scale(1.06);
-}
-
-.ch-play-icon {
-  color: var(--gold-light);
-  font-size: 26px;
-  margin-left: 4px;
-  line-height: 1;
+.ch-video-player video {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .ch-gallery-section {
@@ -1113,9 +1103,6 @@ main {
     height: 54px;
   }
 
-.ch-video-player {
-    aspect-ratio: 16 / 9;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

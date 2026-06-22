@@ -13,6 +13,7 @@ export interface HighlightCard {
   src: string;
   alt: string;
   title: string;
+  text: string;
 }
 
 export interface ConcertDetail {
