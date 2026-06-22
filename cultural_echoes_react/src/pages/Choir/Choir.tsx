@@ -13,7 +13,7 @@ const GALLERY = [
   { src: '/assets/song10.png', alt: '精彩瞬间 10', title: '无名的人 ' },
   { src: '/assets/song11.png', alt: '精彩瞬间 11', title: '孤勇者' },
   { src: '/assets/song12.png', alt: '精彩瞬间 12', title: '海阔天空' },
-  { src: '/assets/song13.png', alt: '精彩瞬间 13', title: '返场：装满星星的口袋' },
+  { src: '/assets/song13.png', alt: '精彩瞬间 13', title: '装满星星的口袋' },
 ];
 
 function GalleryGroup({ duplicate = false }: { duplicate?: boolean }) {
@@ -39,11 +39,11 @@ export default function Choir() {
           <div className="ch-hero-rule" />
           <p className="ch-hero-tagline">以音乐连接文化，<br />以歌声传递美好</p>
           <p className="ch-hero-body">
-            The Cloud Chamber Singers 合唱团由指挥常羲昌魏鹞博士（Dr. Changmuwei Wei）担任音乐总监，汇聚了来自新西兰及国际背景、具有丰富合唱经验的青年与成年歌者，致力于追求卓越的艺术表现和高质量的室内合唱演唱。
+            The Cloud Chamber Singers 合唱团由指挥魏昌慕巍博士（Dr. Changmuwei Wei）担任音乐总监，汇聚了来自新西兰及国际背景、具有丰富合唱经验的青年与成年歌者，致力于追求卓越的艺术表现和高质量的室内合唱演唱。
           </p>
         </div>
         <div className="ch-hero-visual">
-          <img src="/assets/hero-choir.jpg" alt="The Cloud Chamber Singers performing on stage" />
+          <img src="/assets/choir-people-3.JPG" alt="The Cloud Chamber Singers performing on stage" />
         </div>
       </section>
 
@@ -52,13 +52,13 @@ export default function Choir() {
         <div className="ch-about-copy">
           <h2 className="ch-about-heading">ABOUT US</h2>
           <p>
-            合唱团以演绎不同文化背景和时代风格的合唱作品为特色，曲目涵盖文艺复兴、浪漫主义、现代与当代作品，以及中国和新西兰作曲家的优秀合唱音乐。通过高水平的音乐训练和富有创造力的艺术实践，The Cloud Chamber Singers 致力于促进跨文化交流，并为听众带来多元文化全新颖和品质的音乐演出。
+            合唱团以演绎不同文化背景和时代风格的合唱作品为特色，曲目涵盖文艺复兴、浪漫主义、现代与当代作品，以及中国和新西兰作曲家的优秀合唱音乐。通过高水平的音乐训练和富有创造力的艺术实践，The Cloud Chamber Singers 致力于促进跨文化交流，并为奥克兰多元文化社会贡献高品质的音乐演出。
           </p>
           <p>
             2024 年，The Cloud Chamber Singers 在于奥克兰举行的第十三届世界合唱比赛（World Choir Games）室内合唱组（Mixed Chamber Choirs）中荣获金奖（Gold Award），成为新西兰获得该组别最高荣誉的合唱团之一。
           </p>
           <p>
-            作为 The Cloud Choir Group 旗下的旗舰成人合唱团，The Cloud Chamber Singers 始终与儿童合唱团、交响乐团及国际知名艺术家合作演出，并积极参与新西兰地区文化活动及国际交流项目。合唱团秉承"以音乐连接文化，以歌声传递美好"的理念，努力打造具有国际视野的优秀华人合唱艺术团体。
+            作为 The Cloud Choir Group 旗下的旗舰成人合唱团，The Cloud Chamber Singers 经常与儿童合唱团、交响乐团及国际知名艺术家合作演出，并积极参与新西兰重要文化活动及国际交流项目。合唱团秉承“以音乐连接文化，以歌声传递美好”的理念，努力打造具有国际视野的优秀华人合唱艺术团体。
           </p>
         </div>
         <div className="ch-about-photo">
@@ -74,7 +74,7 @@ export default function Choir() {
             controls
             playsInline
             preload="metadata"
-            poster="/assets/choir-wide.jpg"
+            poster="/assets/choir1-poster.jpg"
             aria-label="The Cloud Chamber Singers 合唱团视频"
           >
             <source src="/assets/choir1.mp4" type="video/mp4" />

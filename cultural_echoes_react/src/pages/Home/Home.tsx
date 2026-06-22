@@ -3,7 +3,7 @@ import type { ReasonCard, HighlightCard, ConcertDetail } from '@/types';
 import { Link } from 'react-router-dom';
 
 const REASONS: ReasonCard[] = [
-  { icon: '↗', title: '投资未来', text: '帮助更多人实现长期成长' },
+  { icon: 'trend', title: '投资未来', text: '帮助更多人实现长期成长' },
   { icon: '♡', title: '传承文化', text: '让音乐连接不同时代与多元文化' },
   { icon: '◎', title: '丰富人生', text: '财富创造选择，艺术赋予意义' },
 ];
@@ -52,11 +52,18 @@ export default function Home() {
 
       {/* Why Tiger */}
       <section className="reason-section" id="support" aria-labelledby="reason-title">
-        <h2 id="reason-title">为什么 Tiger 支持《文化回响》?</h2>
+        <h2 id="reason-title">为什么 Tiger Fintech (NZ) Limited  支持《文化回响》？</h2>
         <div className="reason-grid">
           {REASONS.map((r) => (
             <article className="reason-card" key={r.title}>
-              <div className="reason-icon" aria-hidden="true">{r.icon}</div>
+              <div className="reason-icon" aria-hidden="true">
+                {r.icon === 'trend' ? (
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M5 17 10 12l3 3 6-7" />
+                    <path d="M14 8h5v5" />
+                  </svg>
+                ) : r.icon}
+              </div>
               <div>
                 <h3>{r.title}</h3>
                 <p>{r.text}</p>
@@ -128,8 +135,8 @@ export default function Home() {
             <br />
             老虎证券新西兰
           </h2>
-          <p>立足新西兰，连接全球市场。支持文化、支持教育、支持社区成长。</p>
-          <Link className="soft-button small" to="/tiger-fintech">了解更多 Tiger Brokers →</Link>
+          <p>身处新西兰，连接全球市场。支持多元文化。支持丰富教育。支持社区成长。</p>
+          <Link className="soft-button small" to="/tiger-fintech">了解更多 Tiger Fintech (NZ) Limited →</Link>
         </div>
         <div className="network-image">
           <img src="/assets/globe.png" alt="Global network illustration" />
@@ -141,7 +148,7 @@ export default function Home() {
         <blockquote>
           <span>"</span>财富创造可能 · 文化留下回响<span>"</span>
         </blockquote>
-        <p>Tiger Brokers × The Cloud Chamber Singers</p>
+        <p>Tiger Fintech (NZ) Limited × The Cloud Chamber Singers</p>
       </section>
     </PageLayout>
   );
