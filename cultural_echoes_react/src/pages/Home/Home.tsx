@@ -28,7 +28,7 @@ export default function Home() {
       {/* Hero */}
       <section className="hero" id="home">
         <div className="hero-copy">
-          <p className="small-kicker">Tiger Brokers × The Cloud Chamber Singers</p>
+          <p className="small-kicker">Tiger Fintech (NZ) Limited × The Cloud Chamber Singers</p>
           <h1>
             文化回响
             <span>CULTURAL ECHOES</span>
@@ -37,6 +37,9 @@ export default function Home() {
           <p className="english-subtitle">WHERE LOGIC MEETS EMOTION</p>
           <p className="hero-text">
             Tiger Brokers 与 The Cloud Chamber Singers 联合呈现一场跨越文化、时间与心灵的合唱音乐会。
+          </p>
+          <p className="hero-text">
+            当投资关注未来，音乐回应内心。
           </p>
           <p className="hero-text muted">
             在《文化回响》中，我们共同探索财富与精神世界的另一种连接。
