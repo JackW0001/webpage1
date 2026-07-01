@@ -13,7 +13,7 @@ const GALLERY = [
   { src: '/assets/song10.png', alt: '精彩瞬间 10', title: '无名的人 ' },
   { src: '/assets/song11.png', alt: '精彩瞬间 11', title: '孤勇者' },
   { src: '/assets/song12.png', alt: '精彩瞬间 12', title: '海阔天空' },
-  { src: '/assets/song13.png', alt: '精彩瞬间 13', title: '装满星星的口袋' },
+  { src: '/assets/song14.png', alt: '精彩瞬间 13', title: '故乡的云' },
 ];
 
 function GalleryGroup({ duplicate = false }: { duplicate?: boolean }) {
