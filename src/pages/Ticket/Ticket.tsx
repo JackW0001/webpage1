@@ -11,7 +11,7 @@ const STEPS = [
     icon: '♙+',
     text: '同意活动条款并通过活动链接进行注册并开户入金',
     qrLabel: '活动条款二维码',
-    qrSrc: '/assets/highlight-1.jpg', // Replace with your first QR code
+    qrSrc: '/assets/qr1.png', // Replace with your first QR code
   },
   { number: 2, icon: '▣', text: '入金达标并进行任意买入交易' },
   {
