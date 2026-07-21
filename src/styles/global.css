@@ -418,6 +418,10 @@ main {
   font-size: clamp(34px, 4vw, 54px);
 }
 
+.tiger-name-cn {
+  font-size: 0.8em;
+}
+
 .lead,
 .choir-copy p,
 .tiger-copy p {
