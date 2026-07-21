@@ -19,18 +19,20 @@ const STEPS = [
     icon: '⇧',
     text: '联系老虎官方微信客服完成审核',
     qrLabel: '官方客服微信二维码',
-    qrSrc: '/assets/highlight-2.jpg', // Replace with your second QR code
+    qrSrc: '/assets/qr2.png', // Replace with your second QR code
   },
 ];
 
 function QrCode({ label, src }: { label: string; src?: string }) {
   return (
     <div className="tk-qr-wrap">
-      {src ? (
-        <img className="tk-qr" src={src} alt={`${label}二维码`} />
-      ) : (
-        <div className="tk-qr tk-qr-empty">添加二维码</div>
-      )}
+      <div className="tk-qr-frame">
+        {src ? (
+          <img className="tk-qr" src={src} alt={`${label}二维码`} />
+        ) : (
+          <div className="tk-qr-empty">添加二维码</div>
+        )}
+      </div>
       <span>{label}</span>
     </div>
   );
