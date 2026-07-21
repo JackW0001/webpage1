@@ -133,7 +133,7 @@ export default function Home() {
           <h2>
             Tiger Fintech (NZ) Limited
             <br />
-            “老虎证券新西兰”
+            (“老虎证券新西兰”)
           </h2>
           <p>身处新西兰，连接全球市场。支持多元文化。支持丰富教育。支持社区成长。</p>
           <Link className="soft-button small" to="https://www.itiger.com/nz">了解更多 Tiger Fintech (NZ) Limited →</Link>

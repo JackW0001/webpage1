@@ -1,9 +1,12 @@
+import { Fragment } from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 
 const BENEFITS = [
   { title: '礼遇一', deposit: 'NZD $1,000', tickets: 2 },
   { title: '礼遇二', deposit: 'NZD $2,000', tickets: 3 },
 ];
+
+const BENEFITS_SEPARATOR_TEXT = '或';
 
 const STEPS = [
   {
@@ -13,11 +16,11 @@ const STEPS = [
     qrLabel: '活动条款二维码',
     qrSrc: '/assets/qr1.png', // Replace with your first QR code
   },
-  { number: 2, icon: '▣', text: '入金达标并进行任意买入交易' },
+  { number: 2, icon: '▣', text: '首次入金达标并完成任意买入交易' },
   {
     number: 3,
     icon: '⇧',
-    text: '联系老虎官方微信客服完成审核',
+    text: '联系老虎官方微信客服完成领票审核',
     qrLabel: '官方客服微信二维码',
     qrSrc: '/assets/qr2.png', // Replace with your second QR code
   },
@@ -63,14 +66,15 @@ export default function Ticket() {
             <span className="tk-heading-line" />
           </div>
           <p className="tk-section-intro">
-            通过活动成为“老虎证券新西兰”新客户并满足其一礼遇条件，即可领取 Echoes of Culture 2026 演出门票。
+            通过活动成为“老虎证券新西兰”新客户并满足其一礼遇条件，即可申请领取 Echoes of Culture 2026 演出门票（先到先得）：
           </p>
 
           <div className="tk-benefit-grid">
-            {BENEFITS.map((benefit) => (
-              <article className="tk-benefit-card" key={benefit.title}>
+            {BENEFITS.map((benefit, index) => (
+              <Fragment key={benefit.title}>
+              <article className="tk-benefit-card">
                 <h3>{benefit.title}</h3>
-                <p>新客户净入金满 <strong>{benefit.deposit}</strong>并进行买入交易，可获得：</p>
+                <p>首次入金满 <strong>{benefit.deposit}</strong>并进行买入交易，可申请获得：</p>
                 <div className="tk-ticket-reward">
                   <span className="tk-ticket-icon">★</span>
                   <strong>{benefit.tickets}</strong>
@@ -85,6 +89,10 @@ export default function Ticket() {
                 </div>*/}
                 
               </article>
+              {index < BENEFITS.length - 1 && (
+                <p className="tk-benefit-separator">{BENEFITS_SEPARATOR_TEXT}</p>
+              )}
+              </Fragment>
             ))}
           </div>
 
@@ -111,12 +119,12 @@ export default function Ticket() {
 
             <p className="tk-thanks">
             <strong>“老虎证券新西兰”提醒您：</strong>{' '}
-            投资/交易金融工具有风险，包括损失超出您初始投资金额的风险。衍生品、杠杆、和虚拟资产交易具有高风险且并不适合所有投资者。这不是金融建议。
-            任何被讨论、分享和评论的内容都没有考虑您的投资目标或财务需求。请阅读<a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">我们网站</a>
+            活动规则适用。投资/交易金融产品有风险，包括损失超出您初始投资金额的风险。这不是金融建议。
+            任何被讨论、分享和评论的内容都没有考虑您的投资目标或财务需求。请阅读<a href="https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB" target="_blank" rel="noreferrer">我们网站</a>
             上的
-            <a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">披露声明</a>
+            <a href="https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB" target="_blank" rel="noreferrer">披露声明</a>
             以及
-            <a href="https://www.itiger.com/nz/" target="_blank" rel="noreferrer">条款</a>
+            <a href="https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB" target="_blank" rel="noreferrer">条款</a>
             ，并在开户或作出投资决定之前考虑获取或继续持有金融产品是否适合你。图形和图表仅用于说明问题。过去的表现并不是未来结果的可靠指标。由 Tiger Fintech (NZ) Limited (“老虎证券新西兰”) 发布 (NZCN: 8187510)。
             </p>
 
