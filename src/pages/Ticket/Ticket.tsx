@@ -14,7 +14,7 @@ const STEPS = [
     icon: '♙+',
     text: '同意活动条款并通过活动链接进行注册并开户入金',
     qrLabel: '活动条款二维码',
-    qrSrc: '/assets/qr1.png', // Replace with your first QR code
+    qrSrc: '/assets/qr5.jpg', // Replace with your first QR code
   },
   { number: 2, icon: '▣', text: '首次入金达标并完成任意买入交易' },
   {
@@ -120,11 +120,11 @@ export default function Ticket() {
             <p className="tk-thanks">
             <strong>“老虎证券新西兰”提醒您：</strong>{' '}
             活动规则适用。投资/交易金融产品有风险，包括损失超出您初始投资金额的风险。这不是金融建议。
-            任何被讨论、分享和评论的内容都没有考虑您的投资目标或财务需求。请阅读<a href="https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB" target="_blank" rel="noreferrer">我们网站</a>
+            任何被讨论、分享和评论的内容都没有考虑您的投资目标或财务需求。请阅读<a href="https://www.tigerbrokers.nz" target="_blank" rel="noreferrer">我们网站</a>
             上的
-            <a href="https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB" target="_blank" rel="noreferrer">披露声明</a>
+            <a href="https://www.tigerbrokers.nz" target="_blank" rel="noreferrer">披露声明</a>
             以及
-            <a href="https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB" target="_blank" rel="noreferrer">条款</a>
+            <a href="https://www.tigerbrokers.nz" target="_blank" rel="noreferrer">条款</a>
             ，并在开户或作出投资决定之前考虑获取或继续持有金融产品是否适合你。图形和图表仅用于说明问题。过去的表现并不是未来结果的可靠指标。由 Tiger Fintech (NZ) Limited (“老虎证券新西兰”) 发布 (NZCN: 8187510)。
             </p>
 

@@ -6,7 +6,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: '首页', href: '/' },
   { label: '购票信息', href: '/ticket' },
   { label: '合唱团', href: '/choir' },
-  { label: 'Tiger Fintech (NZ) Limited', href: 'https://www.tigerbrokers.nz/activity/forapp/welcome/nzl.html?invite=NZBRAND&utm_source=SEMGGB&utm_medium=Brand&utm_campaign=c1mnzSEMGGB-Tiger/CnC/Brand-220701&utm_campaign_id=18186195000&adgroup_id=139865407159&keyword_id=kwd-337660182663&utm_term=tiger%20nz&original_module=ad&gad_source=1&gad_campaignid=18186195000&gbraid=0AAAAAoQwvdeAzrg7IHo-emG3HwicBjfIa&gclid=Cj0KCQjwjvfSBhDpARIsAEiOpSvYKE4-uLvsLuk1soSGR26X85n6YHxgQz3Swi7EFUCnYYVzgu7F36waAl-_EALw_wcB' },
+  { label: 'Tiger Fintech (NZ) Limited', href: 'https://www.tigerbrokers.nz' },
 ];
 
 export default function Header() {
