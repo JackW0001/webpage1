@@ -14,7 +14,7 @@ const STEPS = [
     icon: '♙+',
     text: '同意活动条款并通过活动链接进行注册并开户入金',
     qrLabel: '活动条款二维码',
-    qrSrc: '/assets/qr5.jpg', // Replace with your first QR code
+    qrSrc: '/assets/qr6.jpg', // Replace with your first QR code
   },
   { number: 2, icon: '▣', text: '首次入金达标并完成任意买入交易' },
   {
@@ -148,7 +148,7 @@ export default function Ticket() {
             <img src="/assets/venue-stage.jpg" alt="Auckland Live venue" />
             <div>
               <p>观众可通过 Auckland Live 官方网站进入演出页面，查看演出信息、票价、座位区域及购票安排。</p>
-              <a href="https://www.aucklandlive.co.nz/" target="_blank" rel="noreferrer">
+              <a href="https://www.aucklandlive.co.nz/show/echoes-of-culture" target="_blank" rel="noreferrer">
                 前往 Auckland Live 官网购票 <span>→</span>
               </a>
             </div>
@@ -165,7 +165,7 @@ export default function Ticket() {
             <div className="tk-ticketmaster-image">ticketmaster®</div>
             <div>
               <p>观众也可通过 Ticketmaster 官方网站搜索 Echoes of Culture 2026，并按照页面指引完成选座及购票。</p>
-              <a href="https://www.ticketmaster.co.nz/" target="_blank" rel="noreferrer">
+              <a href="https://www.ticketmaster.co.nz/artist/4430424?utm_source=TM-google&utm_medium=cpc&utm_campaign=co:NZ+%7C+cpn:Genre+%7C+chl:Gn+%7C+cat:ARTS+%7C+bud:TM+%7C+tp:TMNZ+%7C+catID:8193&utm_content=an:Echoes+of+Culture+%7C+ed:23-08-2026+%7C+vn:Great+Hall,+Auckland+Town+Hall+%7C+a:4430424+%7C+v:295208&gclsrc=aw.ds&gad_source=1&gad_campaignid=20258280192&gclid=CjwKCAjw1IHTBhAaEiwA4AYNFovkUgKIhXVY4LoSFX_Dswhgd7_yT1HdsxLwLR45P3YfMOWDeT9p4BoCKTYQAvD_BwE" target="_blank" rel="noreferrer">
                 前往 Ticketmaster 官网购票 <span>→</span>
               </a>
             </div>
